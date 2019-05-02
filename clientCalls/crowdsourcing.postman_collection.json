@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "dc57cacd-2daf-4b38-9642-99feb514a6a6",
+		"name": "crowdsourcing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Voluntário",
+			"item": [
+				{
+					"name": "Todos voluntários",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/crowdsourcing/volunteers/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crowdsourcing",
+								"volunteers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo voluntário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"Voluntario de teste 9\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/crowdsourcing/volunteers/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crowdsourcing",
+								"volunteers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar voluntário by id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"Voluntario de teste 11\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/crowdsourcing/volunteers/5cca4a569f0d8227ce7d9f39",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crowdsourcing",
+								"volunteers",
+								"5cca4a569f0d8227ce7d9f39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover voluntário by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/crowdsourcing/volunteers/5cca4a569f0d8227ce7d9f39",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crowdsourcing",
+								"volunteers",
+								"5cca4a569f0d8227ce7d9f39"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dono de projeto",
+			"item": [
+				{
+					"name": "Todos dono de projeto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/crowdsourcing/projectowners/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crowdsourcing",
+								"projectowners",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo dono de projeto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"Dono de projeto de teste 1\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/crowdsourcing/projectowners/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crowdsourcing",
+								"projectowners",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar dono de projeto by id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"Dono de projeto teste 66\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/crowdsourcing/projectowners/5cca51925414de3346e45f6f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crowdsourcing",
+								"projectowners",
+								"5cca51925414de3346e45f6f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover dono de projeto by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/crowdsourcing/projectowners/5cca51925414de3346e45f6f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"crowdsourcing",
+								"projectowners",
+								"5cca51925414de3346e45f6f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
