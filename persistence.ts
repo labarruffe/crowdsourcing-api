@@ -63,7 +63,7 @@ export class ProjectRepository {
     }
 
     static async getAll(): Promise<Project[]> {
-        return await ProjectModel.find().exec();
+        return await ProjectModel.find().populate('projectOwner').populate('volunteers').exec();
     }
 
     static async update(id: string, field: Object): Promise<any> {

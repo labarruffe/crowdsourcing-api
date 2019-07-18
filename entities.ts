@@ -1,3 +1,5 @@
+import { ObjectId } from "bson";
+
 export interface ProjectOwner {
     full_name: string
 }
@@ -9,6 +11,6 @@ export interface Volunteer {
 export interface Project {
     topic: string,
     title: string,
-    owner_id: string,
-    volunteers_id: string[]
+    projectOwner: ObjectId,
+    volunteers: ObjectId[]
 }
