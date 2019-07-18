@@ -18,6 +18,9 @@ router
     .delete('/volunteers/:_id', VolunteerController.deleteVolunteer);
 
 router
-    .post('/projects', ProjectController.postProject)    
+    .post('/projects', ProjectController.postProject)   
+    .get('/projects', ProjectController.getAllProject) 
+    .patch('/projects', ProjectController.patchProject) 
+    .delete('/projects', ProjectController.deleteProject) 
 
 export {router};

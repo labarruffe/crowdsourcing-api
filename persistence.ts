@@ -61,4 +61,24 @@ export class ProjectRepository {
         let new_project = await ProjectModel.create(project);
         return new_project.save();
     }
+
+    static async getAll(): Promise<Project[]> {
+        return await ProjectModel.find().exec();
+    }
+
+    static async update(id: string, field: Object): Promise<any> {
+        if (Types.ObjectId.isValid(id)) {
+            return await ProjectModel.findByIdAndUpdate(id, {$set: field}, {new:true})
+        } else {
+           throw new Error('ObjectId Invalid!');
+        }
+    }  
+
+    static async delete(id: string): Promise<any> {
+        if(Types.ObjectId.isValid(id)) {
+            return await ProjectModel.findByIdAndDelete(id);
+        } else {
+            throw new Error('ObjectId Invalid!');
+        }
+    }
 } 
