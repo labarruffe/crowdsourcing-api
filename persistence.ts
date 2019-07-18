@@ -1,5 +1,5 @@
-import {ProjectOwnerModel, VolunteerModel} from './schemes';
-import {ProjectOwner, Volunteer} from './entities';
+import {ProjectOwnerModel, VolunteerModel, ProjectModel} from './schemes';
+import {ProjectOwner, Volunteer, Project} from './entities';
 import {Types} from 'mongoose';
 
 export class ProjectOwnerRepository {
@@ -55,3 +55,10 @@ export class VolunteerRepository {
         }
     }
 }
+
+export class ProjectRepository {
+    static async create(project: Project): Promise<Project> {
+        let new_project = await ProjectModel.create(project);
+        return new_project.save();
+    }
+} 

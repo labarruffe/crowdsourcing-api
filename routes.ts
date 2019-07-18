@@ -1,6 +1,7 @@
 import {Router} from 'express';
 import {ProjectOwnerController} from './controllers/projectOwnerController';
 import {VolunteerController} from './controllers/volunteerController';
+import { ProjectController } from './controllers/projectController';
 
 const router = Router();
 
@@ -15,5 +16,8 @@ router
     .post('/volunteers', VolunteerController.postVolunteer)    
     .patch('/volunteers/:_id', VolunteerController.patchVolunteer)
     .delete('/volunteers/:_id', VolunteerController.deleteVolunteer);
+
+router
+    .post('/projects', ProjectController.postProject)    
 
 export {router};
