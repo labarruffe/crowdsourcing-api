@@ -11,6 +11,6 @@ export interface Volunteer {
 export interface Project {
     topic: string,
     title: string,
-    projectOwner: ObjectId,
-    volunteers: ObjectId[]
+    owner_id: ObjectId,
+    volunteers_id: ObjectId[]
 }

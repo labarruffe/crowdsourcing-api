@@ -19,6 +19,6 @@ interface ProjectDocument extends Project, Document {}
 export const ProjectModel = model<ProjectDocument>('Project', new Schema({
     topic: { type: String, required: true, max: 100 },
     title: { type: String, required: true, max: 100 },
-    projectOwner: { type: Schema.Types.ObjectId, required: true, ref: 'ProjectOwner'},
-    volunteers: [{ type: Schema.Types.ObjectId, required: false, ref: 'Volunteer' }]
+    owner_id: { type: Schema.Types.ObjectId, required: true, ref: 'ProjectOwner'},
+    volunteers_id: [{ type: Schema.Types.ObjectId, required: false, ref: 'Volunteer' }]
 }),'projects');
