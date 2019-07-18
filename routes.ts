@@ -20,7 +20,7 @@ router
 router
     .post('/projects', ProjectController.postProject)   
     .get('/projects', ProjectController.getAllProject) 
-    .patch('/projects', ProjectController.patchProject) 
-    .delete('/projects', ProjectController.deleteProject) 
+    .patch('/projects/:_id', ProjectController.patchProject) 
+    .delete('/projects/:_id', ProjectController.deleteProject) 
 
 export {router};
